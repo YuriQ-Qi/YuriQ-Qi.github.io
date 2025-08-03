@@ -1,0 +1,777 @@
+/* .page{width:85vw;border:1px} height:100vh; */
+nav ul li{display:inline;}
+#page1{background:red}
+#page2{background:green}
+#page3{background:blue}
+/* #pagehome{background:pink;} */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* This is for the background */
+body {
+    background: aqua;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.flexcontainer 
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem_title
+{
+    flex: 100%;
+    font-size: 160%;
+    text-align: center;
+    background-color: rgb(245, 194, 119);
+}
+
+.left_col {
+    flex: 0.38;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* background-color: black; */
+    /* display: none; */
+}
+
+.right_col {
+    flex: 7;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(108, 108, 108);
+}
+
+.flexItem1 {
+    /* This is where this item becomes a container */
+    flex: 1;
+    position: fixed;
+    top: 0;
+    /* this left thing is quite good val */
+    left: -39vh;
+    height: 100vh; /*full height of the screen*/
+    width: 50vh;
+    z-index: 1;
+    box-shadow: 5px 5px 5px grey; /*hori, vert, blur, color*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: black;
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.flexItem1:hover {
+    transform: translateX(20vh);
+}
+
+.flexItem1:not(:hover) {
+    transform: translateX(0vh);
+}
+
+.flexItem1_2 {
+    /* This is where this item becomes a container */
+    flex: 1;
+    position: fixed;
+    top: 0;
+    height: 35vh; /*full height of the screen*/
+    width: 4%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    background-color: blueviolet;
+}
+
+.icon_pic1, .icon_pic2, .icon_pic3, .icon_pic4 {
+    flex: 1;
+    width:80px;
+}
+
+
+.NavBar_flexItem {
+    flex: 1;
+    display: block;
+    height: 60px;
+    /* margin-bottom: 5px; */
+    margin-top: 10px;
+    margin-left: 29vh;
+    /* padding: 5px; */
+    font-size: 90%;
+    color: rgb(157, 150, 150);
+    background-color: black; /*rgb(48, 48, 48)*/
+    text-align: center;
+    border-radius: 10px;
+    
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.NavBar_flexItem:hover {
+    background-color:grey;
+    transform: translateY(-8px);
+    color: white;
+    box-shadow: 0px 5px 3px grey;
+   
+}
+
+nav ul {
+    width: 100vw;
+    display: contents;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.flexItem_home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top: 0;
+    
+}
+
+.flex_PageHt {
+    height: 55vh;
+}
+
+img {
+    width: 95vw;
+}
+
+.flexItem_homePics {
+    flex : 1;
+    /* overflow-y: hidden; */
+    overflow:hidden;
+    /* transition: opacity 0.6s ease-in-out ; */
+    opacity: 0.6;
+    text-align: center;
+    font-size: 120%;
+}
+
+.flexItem_homeDesc {
+    flex : 3;
+    text-align: center;
+    font-size: 110%;
+    color: powderblue;
+    font-family:'Times New Roman', Times, serif;
+    padding-top: 3vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    word-spacing: 0.2vw;
+}
+
+.subheader {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: navy;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    justify-self: center;
+    padding: 6px;
+    /* margin-top: 3vh; */
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.title {
+    position: absolute;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10vw;
+    /* z-index: 1; */
+    opacity: 1.0;
+    padding-left: 30vw;
+    padding-top: 15vh;
+    color: white;
+}
+
+/*This can be reused for every single page*/
+.flexItem_Page {
+    /* flex: 1; (no changes whatsoever) */
+    /*This is where this child become a parent container in the flexbox*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flexItem_TopPics {
+    flex: 1;
+    opacity: 0.6;
+    overflow: hidden;
+}
+
+.flexItem_PageTexts {
+    flex: 2;
+
+    text-align: center;
+    font-size: 110%;
+    color: powderblue;
+    font-family:'Times New Roman', Times, serif;
+    padding-top: 3vh;
+    word-spacing: 0.2vw;
+    width: 70%;
+    justify-self: center;
+
+    /*This will make this a parent container*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#flexItem_Board {
+    flex: 1;
+    background-color: aqua;
+    width: 65%;
+    justify-self: center;
+    justify-content: center;
+    position: relative;
+    padding: 2vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: black;
+    border: black 5px solid ;
+    height: 24vh;
+    width: 13vw;
+    /* perspective: 1000px; */
+
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+@keyframes flipOpenCardFrames{
+0%{transform: rotateY(0deg)}
+50%{transform: rotateY(90deg)}
+100%{transform: rotateY(180deg)}
+}
+
+@keyframes flipCloseCardFrames{
+0%{transform: rotateY(180deg)}
+50%{transform: rotateY(90deg)}
+100%{transform: rotateY(0deg)}
+}
+
+.card.anim1{animation: flipOpenCardFrames 1s forwards;}
+.card.anim2{animation: flipCloseCardFrames 1s forwards;}
+
+.card_front, .card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card_front {
+    transform: rotateY(180deg);
+}
+
+.card_back {
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+.card_img {
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+}
+
+.card_text {
+    height: 30%;
+    font-size: 120%;
+    text-align: center;
+    color: white;
+    border: white 2px solid;
+    background-color: black;
+}
+
+.Inner_left_col {
+    flex: 1;
+    /* width: 50%; */
+    outline: 2px red solid;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.Inner_right_col {
+    flex: 0.7;
+    overflow: hidden;
+    /* width: 40%; */
+    justify-self: center;
+    outline: 2px red solid;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.Inner_pic {
+    width: 60%;
+    height: auto;
+    padding-top: 20%;
+    /* display: block; */
+}
+
+.flexItem_quiz {
+    flex: 1; 
+    margin-top: 5vh;
+    justify-self: center;
+    width: 50vw;
+    background-color: aliceblue;
+    font-family:'Courier New', Courier, monospace;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.flexItem_Question {
+    display: flex; 
+    flex-direction: column;
+    font-size: 120%;
+}
+
+#quizHeader {
+    text-align: center;
+    padding: 3%;
+}
+
+.quiz_img {
+    flex: 1;
+    width: 50%;
+    padding-bottom: 1.2vh;
+}
+
+.flex_options {
+    flex: 1;
+    margin-top: 10px;
+    background-color: aqua;
+}
+
+.PageMap {
+    width: 100%; 
+    height: auto; 
+}
+
+.flexItem_PageMap {
+    flex: 1;
+    width: 55vw;
+    position: relative;
+    justify-self: center;
+    
+}
+
+.Timelinebutton {
+    position: absolute;
+    border-radius: 40px;
+    background-color: white;
+    outline: 2px black solid;
+    width: 3vw;
+    height: 6vh;
+    color: white;
+    z-index: 1;
+}
+
+#TimeBtn1 {
+    left: 30%; /*how many percent this is placed at according to the parent container */
+    top: 19%;
+}
+
+#TimeBtn2 {
+    left: 58%; /*how many percent this is placed at according to the parent container */
+    top: 42%;
+}
+
+#TimeBtn3 {
+    left: 27%; /*how many percent this is placed at according to the parent container */
+    top: 66%;
+}
+
+#TimeBtn4 {
+    left: 58%; /*how many percent this is placed at according to the parent container */
+    top: 66%;
+}
+
+#TimeBtn5 {
+    left: 68%; /*how many percent this is placed at according to the parent container */
+    top: 66%;
+}
+
+#TimeBtn6 {
+    left: 82%; /*how many percent this is placed at according to the parent container */
+    top: 66%;
+}
+
+.flexItem_PageButtons {
+    flex: 1;
+    width: 65vw;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+}
+
+.flexItem_IndividualPageButtons {
+    flex: 1;
+    height: 30vh;
+    width: 12vw;
+    /* border-radius: 10px; */
+    text-align: center;
+    font-size: 130%;
+    border: 5px black solid;
+   
+    transition: transform 0.3s ease-in-out;
+    /* transition: opacity 0.3s ease-in-out; */
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flexItem_IndividualPageButtons:hover {
+    transform: translateY(-8px);
+    opacity: 0.6;
+}
+
+.flexItem_IndividualPicture {
+    flex: 3;
+    width: 11.4vw;
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+.flexItem_IndividualText {
+   
+    flex: 0.5;
+    color: white;
+    background-color: brown;
+    /* border-radius: 10px; */
+    border: 2px white solid;
+}
+
+.buttonSpace {
+    margin-right: 1.5vw;
+    margin-top: 1.5vh;
+}
+
+.scollAnim {
+    animation: text-appear both; /*use both parameters*/
+    /*to link animation to the current scrolling*/
+    animation-timeline: view();
+    animation-range: entry 20% cover 50vh; /*begin this anim when element is 20% of the viewpport then end anim (full opacity now) when the element is 50vh on the screen*/
+}
+
+@keyframes text-appear {
+    /*from transparent and shifted to left by 50px*/
+    from {
+        opacity: 0;
+        transform:translateX(-100);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-20);
+    }
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 10vh;
+}
+
+#hamIcon{display:none;} /*hide this in PC view*/
+
+@media (max-width:800px) {
+.right_col {
+    flex: 100%;
+}
+
+/*make a menu items vertical*/
+nav ul li{
+    /* display: flex;
+    flex-direction: column; */
+    display: block;
+    width: 30%;
+}
+
+/* unhide menu icon */
+#hamIcon{
+    display:flex;
+    position: fixed;
+    left: 0;
+    z-index: 2;
+    border: 2px solid yellow;
+    background-color: black;
+    color: yellow;
+    font-size: 90%;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*hide the menu item list*/
+nav ul{display:none;}
+
+.flexItem1_2 {
+    display: none;
+}
+
+.flexItem1 { /*will not render the slider out bar*/
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    transition: none;
+    transform: none;
+}
+
+.flexItem1:hover,.flexItem1:not(:hover) {
+    transform: none;
+}
+
+.NavBar_flexItem {
+   margin-left: 5%;
+   margin-top: 6vh;
+   width: 50%;
+   font-size: 80%;
+}
+
+/*This part is for the image buttons*/
+nav.flexItem_PageButtons {
+    flex: 1;
+    width: 60vw;
+    height: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    position: relative; 
+}
+
+/*This manage to make the pagebuttons appear */
+nav.flexItem_PageButtons ul {
+    /* list-style: none; */
+    /* padding: 0; */
+    /* margin: 0; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* width: 100%;
+    height: 100%; */
+}
+
+nav.flexItem_PageButtons li {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 1vh 0;
+}
+
+.flexItem_IndividualPageButtons {
+    flex: 1;
+    height: 100%; 
+    width: 100%; 
+    text-align: center;
+    font-size: 130%;
+    border: 5px black solid;
+   
+    transition: transform 0.3s ease-in-out;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flexItem_IndividualPicture {
+    flex: 3;
+    width: 100%; 
+    height: auto;
+}
+
+.flexItem_IndividualText {
+   
+    flex: 0.5;
+    color: white;
+    background-color: brown;
+    font-size: 80%;
+    border: 2px white solid;
+}
+
+.flexItem_TopPics {
+    flex: 1;
+    width: 100%;
+    margin-left: 2%;
+    opacity: 0.6;
+    overflow: hidden;
+}
+
+/*This card text is for the name of the cards*/
+.card_text {
+    height: 30%;
+    font-size: 100%;
+    text-align: center;
+    color: white;
+    border: white 2px solid;
+    background-color: black;
+}
+
+#flexItem_Board {
+    flex: 1;
+    background-color: aqua;
+    width: 60%;
+    justify-self: center;
+    justify-content: center;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.buttonSpace {
+    margin-right: 2vw;
+    margin-top: 2vh;
+}
+
+.card {
+    background-color: black;
+    border: black 5px solid ;
+    height: 24vh;
+    width: 16vw;
+
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+/*This part is for the page map to fill the spaces horizontally*/
+.flexItem_PageMap {
+    flex: 1;
+    position: relative;
+    justify-self: center;
+    width: 100%;
+}
+
+/*This is to readjust page map button shapes and their locations*/
+.Timelinebutton {
+    position: absolute;
+    border-radius: 0px;
+    background-color: white;
+    outline: 2px black solid;
+    width: 5vw;
+    height: 5vh;
+    color: white;
+    z-index: 1;
+}
+
+#TimeBtn1 {
+    left: 30%; /*how many percent this is placed at according to the parent container */
+    top: 18%;
+}
+
+#TimeBtn2 {
+    left: 58%; /*how many percent this is placed at according to the parent container */
+    top: 41%;
+}
+
+#TimeBtn3 {
+    left: 28%; /*how many percent this is placed at according to the parent container */
+    top: 65%;
+}
+
+#TimeBtn4 {
+    left: 58%; /*how many percent this is placed at according to the parent container */
+    top: 65%;
+}
+
+#TimeBtn5 {
+    left: 69%; /*how many percent this is placed at according to the parent container */
+    top: 65%;
+}
+
+#TimeBtn6 {
+    left: 83%; /*how many percent this is placed at according to the parent container */
+    top: 65%;
+}
+
+/*This part is for the quiz area width adjustments*/
+.flexItem_quiz {
+    width: 70vw;
+}
+
+/*To remove that big gap between topPic and the button*/
+.flex_PageHt {
+    height: 2%;
+}
+
+/*This part is to make all the text vertically placed*/
+.region, .culture, .Timeline {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*This part is for the description text*/
+.Inner_left_col {
+    flex: 1;
+    width: 100%; /*doesn't work*/
+    outline: 2px aqua solid;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.Inner_right_col {
+    flex: 1;
+    justify-self: center;
+    outline: 2px aqua solid;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.Inner_pic {
+    width: auto;
+    height: 100%;
+    padding-top: 0;
+}
+
+/*This is to not make the homepage keep moving due to differently sized pictures*/
+.flexItem_home .flex_PageHt {
+    height: 45vh;
+}
+
+/*This is to style the button to open up nav bar */
+
+}
+
+/*to unhide menu items*/
+.menuShow{display: block;}
