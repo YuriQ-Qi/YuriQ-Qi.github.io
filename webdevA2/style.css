@@ -497,6 +497,14 @@ img {
     }
 }
 
+#qrCodeImg {
+    display: block;
+    position: absolute;
+    left: 9%;
+    top:92%;
+    width: 15%;
+} 
+
 footer {
     text-align: center;
     color: white;
@@ -580,15 +588,9 @@ nav.flexItem_PageButtons {
 
 /*This manage to make the pagebuttons appear */
 nav.flexItem_PageButtons ul {
-    /* list-style: none; */
-    /* padding: 0; */
-    /* margin: 0; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* width: 100%;
-    height: 100%; */
 }
 
 nav.flexItem_PageButtons li {
@@ -769,7 +771,7 @@ nav.flexItem_PageButtons li {
     height: 45vh;
 }
 
-/*This is to style the button to open up nav bar */
+#qrCodeImg{display:none;} 
 
 }
 
