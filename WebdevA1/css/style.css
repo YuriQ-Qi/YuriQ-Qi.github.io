@@ -1,0 +1,1058 @@
+/* This is for the mobile layout */
+* {margin: 0px;}
+
+@font-face {
+    font-family: 'angelina';
+    src: url('../fonts/angelina.woff') format(woff);
+}
+
+body {background-color: powderblue;font-family:'Times New Roman', Times, serif;}
+
+#Bkgrdimg {
+    background-image: url(../images/clear_environment.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+th, td, table{border: 1px black solid;}
+
+th, td {padding: 10px;}
+
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem {
+    box-sizing: border-box;
+    height: 120px;
+    padding: 5px;
+}
+
+/* flexItem1 and their own items properties inside here */
+.flexItem1 {
+    flex: 100%;
+    background-color: white;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+
+#flexItem1_height {height: 90px;}
+
+/* This is the normal title of the webpage */
+.flexItem1_1 {
+    flex: 100%; 
+
+    font-size: 120%;
+    text-align: center;
+}
+
+.flexItem_title {
+    flex: 100%;
+
+    font-size: 160%;
+    text-align: center;
+    background-color: rgb(245, 194, 119);
+}
+
+/* The dropdown navi bar */
+.flexItem1_2 {
+    flex: 1;
+    border: blue 3px solid;
+    background-color: grey;
+    margin: 1px;
+    font-size: 120%;
+
+    position: sticky;
+    top: 0;
+}
+
+.flexItem1_3{
+    flex: 1;
+    border: blue 3px solid;
+    background-color: grey;
+    margin: 1px;
+    font-size: 120%;
+}
+
+.NavBar_ht {height: 60px;}
+
+/*Make sure to style the div (the makeshift button), NOT the actual button using the button tag*/
+.drop_button {
+    font-size: 110%;
+    color: beige;
+    font-family: inherit;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: inherit;
+    text-align: center;
+
+    /*Need this for button ani.*/
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+/*ALSO Need this for button ani.*/
+.flexItem1_2:hover, .flexItem1_3:hover {
+    background-color: navy;
+    transform: translateY(-8px);
+    color: powderblue;
+    box-shadow: 5px 5px grey;
+}
+
+/* Dropdown content (to hide it when not in use, write display: none here) */
+.dropdown_things {
+  display: none; 
+  position: absolute;
+  background-color: blueviolet;
+  min-width: 180px;
+  margin-left: 37%;
+  /* to consistently make it appear in front of the text behind */
+  z-index: 1;
+}
+
+/* use of css combinators shown here*/
+/* Links inside the dropdown */
+.dropdown_things a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  font-size: 120%;
+}
+
+/* When hover over the dropdown things, add grey bg */
+.dropdown_things a:hover {background-color: #ddd;color: blue;}
+
+/* When hovered, will show dropdown menu */
+.flexItem1_2:hover .dropdown_things, .flexItem1_3:hover .dropdown_things {
+  display: block;
+}
+
+nav ul{
+list-style-type:none; /*no bullets */
+padding:0;
+display: block;
+}
+nav ul li{margin:2px;}
+
+/* flexItem2 and their own item's properties here */
+.flexItem2 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.flexItem_Msg {
+    height: 80px;
+    justify-self: center;
+    text-decoration: underline;
+    font-size: 150%;
+    color: navy;
+}
+
+.flexItem2_1 {
+    flex: 100%;
+    color: navy;
+    font-size: 180%;
+}
+
+.flexItem2_2 {
+    flex: 100%;
+    color: crimson;
+    font-size: 110%;
+}
+
+.flexItem3 {
+    flex: 3;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexItem3_1, .flexItem3_2 {
+    flex: 1;
+    border: navy 3px solid;
+    text-align: center;
+    color: beige;
+}
+
+.left_col {
+    flex: 100%;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.right_col {
+    flex: 100%;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+img {width: 50%;align-self: center;}
+
+.img2 {width: 30%;align-self: center;}
+
+.img3 {width: 36%;align-self: center;}
+
+.img4 {width: 48%;align-self: center;}
+
+.img5 {width: 26%;align-self: center;}
+
+iframe {height: 78%;}
+
+.flexItem4 {
+    flex: 100%;
+    text-align: center;
+    justify-self: center;
+    color: beige;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: beige 3px solid;
+}
+
+.flexItem5 {
+    flex: 100%;
+    text-align: center;
+    justify-self: center;
+    color: beige;
+    border: beige 3px solid;
+}
+
+.flexItem6 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexItem6_1 {
+    flex: 100%;
+    font-size: 140%;
+    color: white;
+    text-align: center;
+    height: 70px;
+    padding-top: 5px;
+}
+
+.flexItem6_2 {
+    flex: 100%;
+    text-align: center;
+    color: white;
+}
+
+.footer_text {color: black;font-size: 140%;}
+
+.subHeader {
+    font-size: 190%;
+    font-family:'angelina', sans-serif;
+    background-color: yellow;
+}
+
+.flexItem7 {
+    flex: 2;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem7_1 {flex: 100%;margin-bottom: 4px;}
+
+.flexItem7_2 {
+    flex: 100%; 
+    text-indent: 3em;
+    font-size: 135%;
+}
+
+.flexItem8 {
+    flex: 2;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem8_1 {flex: 100%;margin-bottom: 4px;} 
+
+.flexItem8_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 135%;
+    margin-bottom: 4px;
+}
+
+.flexItem8_3 {flex: 100%;text-align: center;}
+
+.flexItem9 {
+    flex: 2;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem9_1 {flex: 100%;margin-bottom: 4px;}
+
+.flexItem9_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 135%;
+    margin-bottom: 4px;
+}
+
+.flexItem9_3 {
+    flex: 100%;
+    display: block;
+    font-size: 135%;
+}
+
+.flexItem10 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.flexItem10_1 {flex: 1;}
+
+.flexItem10_2 {flex: 1;}
+
+.flexItem11 {
+    flex: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+}
+
+.flexItem11_1 {flex: 1;}
+
+.flexItem11_2 {flex: 1;}
+
+@media (min-width: 768px) {
+/* This is for the tablet layout */
+* {margin: 0px;}
+
+body {background-color: powderblue;font-family:'Times New Roman', Times, serif;}
+
+#Bkgrdimg {
+    background-image: url(../images/clear_environment.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+th, td, table{border: 1px black solid;}
+
+th, td {padding: 10px;}
+
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem {
+    box-sizing: border-box;
+    height: 120px;
+    padding: 5px;
+}
+
+/* flexItem1 and their own items properties inside here */
+.flexItem1 {
+    flex: 100%;
+    background-color: white;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+
+#flexItem1_height {height: 90px;}
+
+/* This is the normal title of the webpage */
+.flexItem1_1 {
+    flex: 100%; 
+
+    font-size: 120%;
+    text-align: center;
+}
+
+.flexItem_title {
+    flex: 100%;
+
+    font-size: 160%;
+    text-align: center;
+    background-color: rgb(245, 194, 119);
+}
+
+/* The dropdown navi bar */
+.flexItem1_2 {
+    flex: 1;
+    background-color: grey;
+    margin: 1px;
+    font-size: 120%;
+}
+
+.flexItem1_3{
+    flex: 1;
+    background-color: grey;
+    margin: 1px;
+    font-size: 120%;
+}
+
+.left_col {
+    flex: 100%;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.right_col {
+    flex: 100%;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.NavBar_ht {height: 60px;}
+
+.drop_button {
+    font-size: 110%;
+    color: beige;
+    font-family: inherit;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: inherit;
+    text-align: center;
+
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.flexItem1_2:hover, .flexItem1_3:hover {
+    background-color: navy;
+    transform: translateY(-8px);
+    color: powderblue;
+    box-shadow: 5px 5px grey;
+}
+
+/* Dropdown content (to hide it when not in use, write display: none here) */
+.dropdown_things {
+  display: none; 
+  position: absolute;
+  background-color: blueviolet;
+  min-width: 180px;
+  margin-left: 37%;
+  /* to consistently make it appear in front of the text behind */
+  z-index: 1;
+}
+
+/* use of css combinators shown here*/
+/* Links inside the dropdown */
+.dropdown_things a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  font-size: 120%;
+}
+
+/* When hover over the dropdown things, add grey bg */
+.dropdown_things a:hover {background-color: #ddd;color: blue;}
+
+/* When hovered, will show dropdown menu */
+.flexItem1_2:hover .dropdown_things, .flexItem1_3:hover .dropdown_things {
+  display: block;
+}
+
+nav ul{list-style-type:none; /*no bullets */padding:0;}
+nav ul li{margin:2px;}
+
+/* flexItem2 and their own item's properties here */
+.flexItem2 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.flexItem_Msg {
+    height: 80px;
+    justify-self: center;
+    text-decoration: underline;
+    font-size: 150%;
+    color: navy;
+}
+
+.flexItem2_1 {
+    flex: 100%;
+    color: navy;
+    font-size: 180%;
+}
+
+.flexItem2_2 {
+    flex: 100%;
+    color: crimson;
+    font-size: 110%;
+}
+
+.flexItem3 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem3_1, .flexItem3_2 {
+    flex: 1;
+    border: navy 3px solid;
+    text-align: center;
+    color: beige;
+    justify-self: center;
+}
+
+img {width: 50%;align-self: center;}
+
+.img2 {width: 30%;align-self: center;}
+
+.img3 {width: 36%;align-self: center;}
+
+.img4 {width: 48%;align-self: center;}
+
+.img5 {width: 26%;align-self: center;}
+
+#enlarge_pic {width: 80%;align-self: center;}
+
+iframe {height: 78%;}
+
+.flexItem4 {
+    flex: 1;
+    width: 90%;
+    color: beige;
+}
+
+.flexItem5 {
+    flex: 1;
+    width: 90%;
+    color: beige;
+}
+
+.flexItem6 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexItem6_1 {
+    flex: 100%;
+    font-size: 140%;
+    color: white;
+    text-align: center;
+    height: 70px;
+    padding-top: 5px;
+}
+
+.flexItem6_2 {flex: 100%;color: white;}
+
+.footer_text {color: black;font-size: 140%;}
+
+.subHeader {
+    font-size: 190%;
+    font-family:'angelina', sans-serif;
+    background-color: yellow;
+}
+
+.flexItem7 {
+    flex: 2;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem7_1 {flex: 100%;margin-bottom: 4px;}
+
+.flexItem7_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 97%;
+}
+
+.flexItem8 {
+    flex: 2;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem8_1 {flex: 100%;margin-bottom: 4px;} 
+
+.flexItem8_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 97%;
+    margin-bottom: 4px;
+}
+
+.flexItem8_3 {flex: 100%;text-align: center;}
+
+.flexItem9 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexItem9_1 {flex: 100%;margin-bottom: 4px;}
+
+.flexItem9_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 97%;
+    margin-bottom: 4px;
+}
+
+.flexItem9_3 {
+    flex: 100%;
+    display: block;
+    font-size: 97%;
+}
+
+.flexItem10 {
+    flex: 100%;
+    height: 230px;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem10_1 {flex: 1;}
+
+.flexItem10_2 {flex: 1;}
+
+.flexItem11 {
+    flex: 100%;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem11_1 {
+    flex: 1;
+    margin-right: 3px;
+    border: blue 3px solid;
+}
+
+.flexItem11_2 {
+    flex: 1;
+    margin-left: 3px;
+    border: blue 3px solid;
+}
+}
+
+@media (min-width: 1280px) {
+/*This is for the computer layout*/
+* {margin: 0px;}
+
+body {background-color: powderblue;font-family:'Times New Roman', Times, serif;}
+
+#Bkgrdimg {
+    background-image: url(../images/clear_environment.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+th, td, table{
+    border: 1px black solid;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem {
+    box-sizing: border-box;
+    height: 120px;
+    padding: 5px;
+}
+
+/* flexItem1 and their own items properties inside here */
+.flexItem1 {
+    flex: 100%;
+    background-color: white;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-direction: row-reverse;
+
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+
+#flexItem1_height {
+    height: 60px;
+}
+
+/* This is the normal title of the webpage */
+.flexItem1_1 {
+    flex: 100%; 
+
+    font-size: 120%;
+    text-align: center;
+}
+
+.flexItem_title {
+    flex: 100%;
+
+    height: 60px;
+    font-size: 160%;
+    text-align: center;
+    background-color: rgb(245, 194, 119);
+}
+
+/* The dropdown navi bar */
+.flexItem1_2 {
+    flex: 100%;
+    background-color: grey;
+   
+    font-size: 120%;
+}
+
+.flexItem1_3 {
+    flex: 100%;
+    background-color: grey;
+    font-size: 120%;
+}
+
+.left_col {
+    flex: 0.5;
+    height: 830px;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.right_col {
+    flex: 3;
+
+    /* This is where it becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.NavBar_ht {height: 60px;}
+
+.drop_button {
+    font-size: 110%;
+    margin: 0;
+    color: beige;
+    font-family: inherit;
+    border-radius: 8px;
+    background-color: inherit;
+    text-align: center;
+    width:90%;
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.flexItem1_2:hover, .flexItem1_3:hover {
+    background-color: navy;
+    transform: translateY(-8px);
+    color: powderblue;
+    box-shadow: 5px 5px grey;
+}
+
+/* Dropdown content (to hide it when not in use, write display: none here) */
+.dropdown_things {
+  display: none; 
+  position: absolute;
+  background-color: blueviolet;
+  top: 100%;
+  min-width: 180px;
+  margin: 0;
+  /* to consistently make it appear in front of the text behind */
+  z-index: 1;
+}
+
+/* use of css combinators shown here*/
+/* Links inside the dropdown */
+.dropdown_things a {
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 120%;
+}
+
+/* When hover over the dropdown things, add grey bg */
+.dropdown_things a:hover {background-color: #ddd;color: blue;}
+
+/* When hovered, will show dropdown menu */
+.flexItem1_2:hover .dropdown_things, .flexItem1_3:hover .dropdown_things {
+  display: block;
+}
+
+nav ul{list-style-type:none; /*no bullets */padding:0;}
+nav ul li{margin:0;}
+
+/* flexItem2 and their own item's properties here */
+.flexItem2 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.flexItem_Msg {
+    height: 80px;
+    justify-self: center;
+    text-decoration: underline;
+    font-size: 150%;
+    color: navy;
+}
+
+.flexItem2_1 {
+    flex: 100%;
+    height: 40px;
+    color: navy;
+    font-size: 180%;
+}
+
+.flexItem2_2 {
+    flex: 100%;
+    height: 40px;
+    color: crimson;
+    font-size: 110%;
+}
+
+.flexItem3 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexItem3_1, .flexItem3_2 {
+    flex: 1;
+    border: navy 3px solid;
+    text-align: center;
+}
+
+img {width: 50%;align-self: center;}
+
+.img2 {width: 30%;align-self: center;}
+
+.img3 {width: 36%;align-self: center;}
+
+.img4 {width: 48%;align-self: center;}
+
+.img5 {width: 26%;align-self: center;}
+
+#enlarge_pic {width: 80%;align-self: center;}
+
+iframe {height: 78%;}
+
+.flexItem4 {
+    flex: 1;
+    width: 90%;
+    color: beige;
+}
+
+.flexItem5 {
+    flex: 1;
+    width: 90%;
+    color: beige;
+}
+
+.flexItem6 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexItem6_1 {
+    flex: 100%;
+    font-size: 140%;
+    color: white;
+    text-align: center;
+    height: 70px;
+    padding-top: 5px;
+}
+
+.flexItem6_2 {flex: 100%;color: white;}
+
+.footer_text {color: black;font-size: 140%;}
+
+.subHeader {
+    font-size: 190%;
+    font-family:'angelina', sans-serif;
+    background-color: yellow;
+}
+
+.flexItem7 {
+    flex: 2;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem7_1 {flex: 100%;margin-bottom: 4px;}
+
+.flexItem7_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 97%;
+}
+
+.flexItem8 {
+    flex: 2;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem8_1 {flex: 100%;margin-bottom: 4px;} 
+
+.flexItem8_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 97%;
+    margin-bottom: 4px;
+}
+
+.flexItem8_3 {flex: 100%;text-align: center;}
+
+.flexItem9 {
+    flex: 100%;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexItem9_1 {flex: 100%;margin-bottom: 4px;}
+
+.flexItem9_2 {
+    flex: 100%;
+    text-indent: 3em;
+    font-size: 97%;
+    margin-bottom: 4px;
+}
+
+.flexItem9_3 {
+    flex: 100%;
+    display: block;
+    font-size: 97%;
+}
+
+.flexItem10 {
+    flex: 100%;
+    height: 230px;
+
+    /* This is where this item becomes a container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem10_1 {flex: 1;width: 50%;}
+
+.flexItem10_2 {flex: 1;width: 50%;}
+
+.flexItem11 {
+    flex: 100%;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flexItem11_1 {
+    flex: 1;
+    margin-right: 3px;
+    border: blue 3px solid;
+}
+
+.flexItem11_2 {
+    flex: 1;
+    margin-left: 3px;
+    border: blue 3px solid;
+}
+}
